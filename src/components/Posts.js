@@ -18,7 +18,7 @@ const posts=[
 //match.path refers to the path pattern used to match in the route path prop
 export default function Posts({match}){
   const listItems = posts.map((post) =>
-    <Link to={`${match.url}/${post.id}`}>
+    <Link key={post.id} to={`${match.url}/${post.id}`}>
       <Post title={post.title} image={post.image} category={post.category} date={post.posted_date} content={post.content} />
     </Link>
   );
@@ -44,16 +44,16 @@ function Topic({match}){
 
 function Post(props){
     return(
-      <div class="post">
-        <img class="post-image" src={props.image} alt=""></img>
-        <a class="post-body" style={{display:"block"}} href="#">
-          <span class="post-category">{props.category}</span>
-          <span class="post-date">{props.date}</span>
-          <h2 class="post-title">{props.title}</h2>
-          <p class="post-content">
+      <div className="post">
+        <img className="post-image" src={props.image} alt=""></img>
+        <div className="post-body">
+          <span className="post-category">{props.category}</span>
+          <span className="post-date">{props.date}</span>
+          <h2 className="post-title">{props.title}</h2>
+          <p className="post-content">
             {props.content}
           </p>
-        </a>
+        </div>
       </div>
     );
 }
@@ -62,7 +62,7 @@ function PostHeader(){
     <header>
       <h1>Blog</h1>
       <h2>Computer Science and Technology tutorials and articles.</h2>
-      <div class="logo">
+      <div className="logo">
         <Icon style={{fontSize:"40px"}} type="youtube" />
         <Icon style={{fontSize:"40px"}} type="instagram" />
         <Icon style={{fontSize:"40px"}} type="facebook" />

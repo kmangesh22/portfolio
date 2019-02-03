@@ -1,0 +1,24 @@
+.artgallery{
+  display:flex;
+  flex-wrap: wrap;
+}
+.painting{
+  /*
+  default value
+  flex-grow: 0
+  flex-shrink:1
+  flex-basis:1 */
+  width:29%;
+  height: 80vh;
+  border-radius: 2.5%;
+  margin:3%;
+  flex-grow:1;
+  flex-shrink:1;/*by default */
+}
+
+
+@media (max-width:499px) {
+  .painting{
+    width:90%;
+  }
+}

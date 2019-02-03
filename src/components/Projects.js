@@ -44,7 +44,7 @@ class Project extends React.Component{
 
 
 export default function Projects(){
-  const projects=identifiers.map(identifier=><Project title={identifier} />)
+  const projects=identifiers.map(identifier=><Project key={identifier} title={identifier} />)
   return(
     <div>{projects}</div>
   )

@@ -2,11 +2,10 @@ import React, { Component } from 'react'
 import {Menu,Dropdown,Icon} from 'antd'
 import {BrowserRouter,Link,Route} from 'react-router-dom'
 import Home from './Home'
-import Art from "./Art"
+import ArtGallery from "./ArtGallery"
 import Posts from "./Posts"
 import Projects from "./Projects"
 import "../sass/App.scss"
-import 'antd/dist/antd.css';
 
 class App extends Component {
   render() {
@@ -27,7 +26,7 @@ class App extends Component {
     );
     return(
       <div>
-        <nav>
+        <nav style={{width:"100%"}}>
           <ul>
             <Link className="link-item" to="/">Home</Link>
             <Link className="link-item" to="/posts">Posts</Link>
@@ -39,7 +38,7 @@ class App extends Component {
           </ul>
         </nav>
         <Route exact path="/" component={Home} />
-        <Route exact path="/art" component={Art} />
+        <Route exact path="/art" component={ArtGallery} />
         <Route path="/posts" component={Posts} />
         <Route exact path="/projects" component={Projects} />
       </div>

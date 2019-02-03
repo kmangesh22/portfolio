@@ -24,5 +24,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-cwebp": "^2.1.1"
+  }
 }
