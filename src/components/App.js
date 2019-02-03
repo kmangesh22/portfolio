@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Menu,Dropdown,Icon} from 'antd'
-import {BrowserRouter,Link,Route} from 'react-router-dom'
+import {HashRouter,Link,Route} from 'react-router-dom'
 import Home from './Home'
 import ArtGallery from "./ArtGallery"
 import Posts from "./Posts"
@@ -10,9 +10,9 @@ import "../sass/App.scss"
 class App extends Component {
   render() {
     return(
-      <BrowserRouter>
+      <HashRouter>
             {this.renderNavigation()}
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 
